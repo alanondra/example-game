@@ -1,0 +1,9 @@
+set(MODULES
+	src/AppInfo.cppm
+	src/Game.cppm
+	src/Windowing/Exceptions.cppm
+	src/Windowing/Exceptions/SdlException.cppm
+	src/Windowing/Exceptions/SdlInitializationException.cppm
+	src/Windowing/Exceptions/SdlRendererException.cppm
+	src/Windowing/Exceptions/SdlWindowException.cppm
+)

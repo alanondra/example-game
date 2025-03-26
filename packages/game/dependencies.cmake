@@ -1,0 +1,20 @@
+CPMAddPackage(
+	NAME SDL3
+	GITHUB_REPOSITORY libsdl-org/SDL
+	GIT_TAG release-3.2.8
+	OPTIONS
+	"SDL_STATIC ON"
+	"SDL_SHARED OFF"
+)
+CPMAddPackage(
+	NAME SDL3_ttf
+	GITHUB_REPOSITORY libsdl-org/SDL_ttf
+	GIT_TAG release-3.2.0
+	OPTIONS
+	"BUILD_SHARED_LIBS OFF"
+)
+
+set(DEPENDENCIES
+	SDL3_ttf::SDL3_ttf
+	SDL3::SDL3
+)
