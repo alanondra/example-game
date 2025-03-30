@@ -4,6 +4,8 @@ export module AppInfo;
 
 export struct AppInfo
 {
+	static constexpr const char* domain = "me.aondra.example-game";
+
 	static constexpr const char* org = "Alan Ondra";
 	static constexpr const char* orgShort = "AOndra";
 	static constexpr const char* orgLower = "aondra";
