@@ -15,6 +15,7 @@ export module Game;
 
 import AppInfo;
 import Windowing.Exceptions;
+import Windowing.WindowBuilder;
 
 export class Game
 {
@@ -147,16 +148,15 @@ export class Game
 		{
 			SDL_SetHint(SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH, "1");
 
-			this->window.reset(SDL_CreateWindow(
-				this->title.c_str(),
-				1280,
-				720,
-				SDL_WINDOW_HIGH_PIXEL_DENSITY | SDL_WINDOW_RESIZABLE
-			));
+			WindowBuilder builder;
 
-			if (!this->window) {
-				throw SdlWindowException();
-			}
+			builder.setTitle(this->title);
+			builder.setResizable(false);
+			builder.setHighDpi(true);
+			builder.setWindowSize({1280, 720});
+			builder.setDisplay(0);
+
+			this->window = builder.build();
 		}
 
 		void createRenderer()
