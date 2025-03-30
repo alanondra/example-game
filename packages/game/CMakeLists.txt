@@ -12,10 +12,12 @@ set(SRC src/main.cpp)
 
 include(modules.cmake)
 
-add_executable(Game ${SRC})
+add_executable(game ${SRC})
+
+include(.cmake/platforms.cmake)
 
 target_sources(
-	Game
+	game
 	PRIVATE
 	${SRC}
 	PRIVATE
@@ -25,13 +27,13 @@ target_sources(
 )
 
 target_link_libraries(
-	Game
+	game
 	PRIVATE
 		${DEPENDENCIES}
 )
 
 target_compile_features(
-	Game
+	game
 	PRIVATE
 		cxx_std_23
 )
