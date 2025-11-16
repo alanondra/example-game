@@ -1,0 +1,21 @@
+find_package(Threads REQUIRED)
+
+CPMAddPackage(
+	NAME fmt
+	GITHUB_REPOSITORY fmtlib/fmt
+	GIT_TAG 11.1.4
+	OPTIONS
+	"BUILD_SHARED_LIBS OFF"
+)
+
+CPMAddPackage(
+	NAME wxWidgets
+	GITHUB_REPOSITORY wxWidgets/wxWidgets
+	GIT_TAG v3.3.1
+	OPTIONS
+		"BUILD_SHARED_LIBS OFF"
+#		"wxBUILD_TOOLKIT gtk4"
+		"wxBUILD_SHARED OFF"
+		"wxBUILD_SAMPLES OFF"
+		"wxBUILD_TESTS OFF"
+)

@@ -1,0 +1,9 @@
+find_package(Threads REQUIRED)
+
+CPMAddPackage(
+	NAME fmt
+	GITHUB_REPOSITORY fmtlib/fmt
+	GIT_TAG 11.1.4
+	OPTIONS
+	"BUILD_SHARED_LIBS OFF"
+)
