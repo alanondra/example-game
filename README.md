@@ -10,6 +10,6 @@ This is an example game for Linux and Windows.
 * [CLion](https://www.jetbrains.com/clion/) (paid)
 
 ### Build Tools
-* [CMake](https://cmake.org/download/) v3.31+
-* [Ninja](https://github.com/ninja-build/ninja/releases/) v1.12+
-* [Clang](https://releases.llvm.org/download.html) v19+
+* [CMake](https://cmake.org/download/) v4.1+
+* [Ninja](https://github.com/ninja-build/ninja/releases/) v1.13+
+* [Clang](https://releases.llvm.org/download.html) v21+
